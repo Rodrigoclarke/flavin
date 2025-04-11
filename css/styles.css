@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    animation: fadeInBody 1s ease-in;
+  }
+  
+  @keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #111;
+    animation: bounceIn 1.2s ease-out;
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  .subtitulo {
+    font-style: italic;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .imagem-principal {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    animation: fadeInBody 1.5s ease-in;
+  }
+  
+  .botao {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: pulseIn 1.5s infinite alternate;
+  }
+  
+  .botao:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+  }
+  
+  @keyframes pulseIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.02); }
+  }
+  
+  .galeria h2,
+  .video h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #444;
+    animation: fadeInBody 1s ease-in;
+  }
+  
+  .fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .fotos img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .fotos img:hover {
+    transform: scale(1.08) rotate(-2deg);
+  }
+  
+  .video {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+  }
+  
+  @media (max-width: 600px) {
+    .fotos img {
+      width: 100%;
+    }
+  
+    .video iframe {
+      height: 200px;
+    }
+  }
